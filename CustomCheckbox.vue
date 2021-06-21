@@ -4,7 +4,6 @@
     v-model="valueLocal"
     v-bind="$attrs"
     v-on="$listeners"
-    @change="onChange"
   />
 </template>
 
@@ -22,12 +21,6 @@ export default {
       set(val) {
         this.$emit('input', val);
       },
-    },
-  },
-
-  methods: {
-    onChange(val) {
-      this.$emit('input', val);
     },
   },
 };
